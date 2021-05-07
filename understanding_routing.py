@@ -7,8 +7,8 @@ def not_found(e):
 
 
 @app.route("/")
-def hello_world("index2.html", phrase = "Hello", times = 5):
-    return render_template('index2.html')
+def hello_world():
+    return render_template('index2.html', phrase = "Hello", times = 5)
 
 @app.route("/dojo")
 def hello_dojo():
@@ -25,6 +25,10 @@ def say_name(name):
 def numero_multipo(number, message):
     print(message *number)
     return f"{message} " * number
+
+# @app.route("/variable/<phrase>/<times>")
+# def hello_world():
+#     return render_template('index2.html', phrase, times)
 
 if __name__ == "__main__":
     app.run(debug = True)
