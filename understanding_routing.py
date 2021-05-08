@@ -8,7 +8,7 @@ def not_found(e):
 
 @app.route("/")
 def hello_world():
-    return render_template('index2.html', phrase = "Hello", times = 5)
+    return render_template('index.html', phrase = "Hello", times = 5)
 
 @app.route("/dojo")
 def hello_dojo():

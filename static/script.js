@@ -8,9 +8,9 @@ const daysOfWeek = [
     /*6*/"Saturday"
 ];
 const weatherDesc = {
-    sunny: ["some sun", "some_sun.png"],
-    cloudy: ["some clouds", "some_clouds.png"],
-    rainy: ["some rain", "some_rain.png"]
+    sunny: ["some sun", "{{ url_for('static', filename='img/some_sun.png') }}"],
+    cloudy: ["some clouds", "{{ url_for('static', filename='img/some_sun.png') }}"],
+    rainy: ["some rain", "{{ url_for('static', filename='img/some_sun.png') }}"]
 }
 
 var cookie = document.getElementById("cookieAlert");
